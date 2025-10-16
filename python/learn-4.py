@@ -29,3 +29,18 @@ while x < 101:
     ket = ganjilGenap(x)
     print(f"{x} adalah {ket}")
     x += 1
+    
+kata = "Algoritma"
+for huruf in kata:
+    if huruf == 'x':
+        continue
+    print(huruf)
+    
+print ("tebak huruf")
+while True:
+    inputhuruf = input("masukkan huruf : ")
+    if inputhuruf.lower() == 'f':
+        print("tebakan anda benar")
+        break
+    else:
+        print("tebakan anda salah, silahkan coba lagi")
