@@ -1,5 +1,5 @@
 data_mhs = {"12345": {"nama": "Budi", "prodi": "55201"}, 
-            "54321": {"nama": "Joko", "prodi": "55202"}},
+            "54321": {"nama": "Joko", "prodi": "55202"}}
 
 data_prodi = {"55201": "Informatika", "55202": "Sistem Informasi"}
 
@@ -16,9 +16,9 @@ nilai_cari = data_nilai.get(input_nim)
 if nim_cari is not None:
     nama_prodi = data_mhs.get(input_nim)["prodi"]
     print(f"NIM : {input_nim}\nNama: {nim_cari['nama']}\nProdi: {nama_prodi}")
-    if nilai_cari is not None:
+    if nilai_cari!=None:
         print("--------------------------------------------")
-        print("No.\tKode MK\tNama MK\t\tSKS\tNHT\tNA\t\tTotal")
+        print("No.\t|Kode MK\t|Nama MK|\t\tSKS|\tNHT|\tNA|\t\tTotal")
         no = 1
         totsks = 0
         totna = 0
@@ -39,7 +39,7 @@ if nim_cari is not None:
             tot = makul_cari['sks'] * na
             totsks += makul_cari['sks']
             totna += tot
-            print(f"{no}\t{kdmak}\t{makul_cari['namaMk']}\t{makul_cari['sks']}\t{nilai[0]}\t{na}\t{tot}")
+            print(f"{no}\t|{kdmk}\t|{makul_cari['namaMk']}|\t{makul_cari['sks']}\t|{nilai[0]}\t|{na}\t|{tot}")
 
             no += 1
         print("--------------------------------------------")
